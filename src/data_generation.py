@@ -1,0 +1,34 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Feb  1 22:45:10 2021
+
+@author: janni
+"""
+
+from scipy.stats import norm
+import pandas as pd
+from pathlib import Path
+
+path = Path('C:/Users/janni/Desktop/blueprint/ml-blueprint-arch')
+
+def generate_data():
+    
+    n= 1000
+    
+    x1 = norm.rvs(10,5,n)
+    x2 = norm.rvs(20,5,n)
+    epsilon = norm.rvs(0,1,n)
+    
+    y = x1 + x2 + epsilon
+    
+    df = pd.DataFrame(list(zip(y,x1,x2)), columns=['y', 'x1', 'x2'])
+    
+    df.to_pickle(path / 'data' / 'dat.pkl')
+    
+    print('Data generated!')
+    return df
+
+
+
+if __name__=='__main__':
+    generate_data()
