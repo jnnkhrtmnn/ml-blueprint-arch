@@ -12,6 +12,17 @@ from pathlib import Path
 path = Path('C:/Users/janni/Desktop/blueprint/ml-blueprint-arch')
 
 def generate_data():
+    '''
+    Generates random data set with y, x1, x2 and epsilon.
+    y is a linear combination of iid gaussian x1 and x2
+    plus the gaussian error term epsilon
+
+    Returns
+    -------
+    df : TYPE
+        DESCRIPTION.
+
+    '''
     
     n= 1000
     
