@@ -13,10 +13,11 @@ from flask import Flask, request, jsonify
 
 
 # initialisepath
-path = Path('C:/Users/janni/Desktop/blueprint/ml-blueprint-arch')
+
+#path = Path('C:/Users/janni/Desktop/blueprint/ml-blueprint-arch')
 
 # load model
-reg = load(path / 'models' / 'reg.joblib') 
+reg = load(Path('models') / 'reg.joblib') 
     
     
     
@@ -54,4 +55,4 @@ def ml_inference():
  
 
 if __name__ == '__main__':
-    app.run(debug=True,port=12345)
+    app.run(host='0.0.0.0', debug=True)

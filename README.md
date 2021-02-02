@@ -26,3 +26,9 @@ To run the app, simply execute `python app.py`.
 
 ## API test
 Test the API by sending the stored POST request using POSTMAN.
+
+## Docker
+Added a dockerfile.
+The image can be built by running 
+`docker build . -t mlblueprintarch:v1`.
+To start the container just run `docker run -p 5000:5000 mlblueprintarch:v1`.

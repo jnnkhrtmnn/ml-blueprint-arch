@@ -12,6 +12,38 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
+					"raw": "\r\n{\r\n    \"x1\" : 100,\r\n    \"x2\" : 1\r\n}   \r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/predict",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"predict"
+					]
+				},
+				"description": "Testing th Flask API with Postman\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Docker predict test",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
 					"raw": "\r\n{\r\n    \"x1\" : 12,\r\n    \"x2\" : 11\r\n}   \r\n",
 					"options": {
 						"raw": {
@@ -20,15 +52,11 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:12345/predict",
-					"protocol": "http",
+					"raw": "localhost:5000/predict",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"localhost"
 					],
-					"port": "12345",
+					"port": "5000",
 					"path": [
 						"predict"
 					]
