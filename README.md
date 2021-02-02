@@ -23,12 +23,12 @@ Run `python src/train.py` in the project root directory.
 ## Run Flask App
 To run the app, simply execute `python app.py`.
 
-
-## API test
-Test the API by sending the stored POST request using POSTMAN.
-
 ## Docker
 Added a dockerfile.
 The image can be built by running 
 `docker build . -t mlblueprintarch:v1`.
 To start the container just run `docker run -p 5000:5000 mlblueprintarch:v1`.
+
+
+## API tests
+Test the APIs by sending the stored POST requests (either to docker app or flask app) using POSTMAN
