@@ -1,5 +1,5 @@
-# ml-blueprint-arch
- blueprint folder structure and Flask setup for machine learning projects using a prediction API endpoint.
+# Deployable Machine Learning App Blueprint
+Simple blueprint for machine learning projects using a prediction API run via Flask app and Docker.
 
 ## Conda envs
 Firt, create an environment with
