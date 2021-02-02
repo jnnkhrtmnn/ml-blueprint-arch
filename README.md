@@ -7,16 +7,22 @@ Firt, create an environment with
 activate the environment using
 `conda activate blueprint`,\
 then `cd` to the root folder of your project and install all requirements with 
-`conda install -r requirements.txt`
+`conda install -r requirements.txt`.
 
-## Data & Training
-In the same cd execute `python src/generate_data.py`\
-and `python src/train.py`
+## Data genertion
+In the same cd execute `python src/generate_data.py` to generate some artificial data.
+
+
+## DA
+There is also a `jupyter notebook` for some EDA.
+
+## Model training
+Run `python src/train.py` in the project root directory.
 
 
 ## Run Flask App
-To run the app, simply execute `python app.py`
+To run the app, simply execute `python app.py`.
 
 
 ## API test
-Test the API by sending the stored POST request using POSTMAN
+Test the API by sending the stored POST request using POSTMAN.
