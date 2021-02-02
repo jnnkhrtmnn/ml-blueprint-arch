@@ -1,11 +1,12 @@
 # ml-blueprint-arch
- blueprint folderstructure for ml
+ blueprint folder structure and Flask setup for machine learning projects using a prediction API endpoint.
 
 ## Conda envs
-
-`conda create -n blueprint python=3.8`\
-`conda activate blueprint`\
-cd to root folder\
+Firt, create an environment with
+`conda create -n blueprint python=3.8`,\
+activate the environment using
+`conda activate blueprint`,\
+then `cd` to the root folder of your project and install all requirements with 
 `conda install -r requirements.txt`
 
 ## Data & Training
