@@ -26,8 +26,8 @@ def generate_data():
     
     n= 1000
     
-    x1 = norm.rvs(10,5,n)
-    x2 = norm.rvs(20,5,n)
+    x1 = norm.rvs(10,3,n)
+    x2 = norm.rvs(30,5,n)
     epsilon = norm.rvs(0,1,n)
     
     y = x1 + x2 + epsilon
