@@ -6,7 +6,7 @@ Firt, create an environment with
 `conda create -n blueprint python=3.8`,\
 activate the environment using
 `conda activate blueprint`,\
-then `cd` to the root folder of your project and install all requirements with 
+then `cd` to the root folder of your project and install all requirements with
 `conda install -r requirements.txt`.
 
 ## Data genertion
@@ -25,7 +25,7 @@ To run the app, simply execute `python app.py`.
 
 ## Docker
 Added a dockerfile.
-The image can be built by running 
+The image can be built by running
 `docker build . -t mlblueprintarch:v1`.
 To start the container just run `docker run -p 5000:5000 mlblueprintarch:v1`.
 

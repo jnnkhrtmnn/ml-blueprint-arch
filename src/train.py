@@ -1,65 +1,37 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Feb  1 23:06:15 2021
-
-@author: janni
-"""
-
 import pandas as pd
-from pathlib import Path
 from sklearn.linear_model import LinearRegression
-from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
-from joblib import dump
+from sklearn.model_selection import train_test_split
 
 
-path = Path('C:/Users/janni/Desktop/blueprint/ml-blueprint-arch')
-
-# load data
-df = pd.read_pickle(path / 'data' / 'dat.pkl')
-
-
-def train_model(df: pd.DataFrame):
-    '''
-    trains lin reg model.
+def train_model(training_data: pd.DataFrame) -> LinearRegression:
+    """Trains lin reg model.
+    Saves model to folder.
 
     Parameters
     ----------
-    df : TYPE
-        DESCRIPTION.
+    training_data: pandas DataFrame with columns x1, x2 and y.
 
     Returns
     -------
-    reg : TYPE
-        DESCRIPTION.
+    Trained Linear Regression model
 
-    '''
-    
-    x_cols =['x1', 'x2']
+    """
 
-    X = df[x_cols]
-    y = df['y']
-    
-    X_train, X_test, y_train, y_test = train_test_split(X, y
-                                                        ,test_size=0.30
-                                                        ,random_state=42)
-    reg = LinearRegression()
-    reg.fit(X_train,y_train)
-    
-    print('Training done!')
-    
-    y_pred = reg.predict(X_test)
+    feature_names = ["x1", "x2"]
+
+    X = training_data[feature_names]
+    y = training_data["y"]
+
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=42)
+    regressor = LinearRegression()
+    regressor.fit(X_train, y_train)
+
+    print("Training done!")
+
+    y_pred = regressor.predict(X_test)
     mse = mean_squared_error(y_test, y_pred)
-    
-    print('Test MSE: {} on {} test samples'.format(mse, len(y_pred)))
-    
-    dump(reg, path / 'models' / 'reg.joblib') 
-    print('Model saved at: {}'.format(path / 'models' / 'reg.joblib'))
-    
-    return reg
-    
-    
 
+    print(f"Test MSE: {mse} on {len(y_pred)} test samples")
 
-if __name__=='__main__':
-    train_model(df)
+    return regressor
