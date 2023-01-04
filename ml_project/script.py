@@ -4,7 +4,6 @@ from pathlib import Path
 
 import joblib
 import mlflow
-
 from src.data_generation import generate_data
 from src.train import train_model
 
@@ -16,7 +15,7 @@ logging.basicConfig(  # type: ignore
 
 logger = logging.getLogger(__name__)  # type: ignore
 
-project_path = Path(__file__).parent.resolve()
+project_path = Path(__file__).parent.parent.resolve()
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--no_mlflow_logging", action=argparse.BooleanOptionalAction)

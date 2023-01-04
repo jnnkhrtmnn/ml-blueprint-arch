@@ -22,7 +22,7 @@ class PredictionOut(BaseModel):
 @app.post("/predict", response_model=PredictionOut)
 def prediction_service(input_data: ObservationIn):
 
-    model_file = Path(__file__).parent.resolve() / "models" / "regressor.joblib"
+    model_file = Path(__file__).parent.parent.resolve() / "models" / "regressor.joblib"
     regressor = joblib.load(model_file)
 
     X = np.array([[input_data.x1, input_data.x2]])
