@@ -19,6 +19,9 @@ There is also a `jupyter notebook` for some EDA.
 ## Model training
 Run `python src/train.py` in the project root directory.
 
+## MLflow
+`poetry run mlflow server`
+`http://127.0.0.1:5000`
 
 ## Run Flask App
 To run the app, simply execute `python app.py`.
