@@ -125,7 +125,7 @@ dmypy.json
 .pyre/
 
 
-# folders
+# directories
 data/
 models/
 mlruns/
